@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Age calculator app</title>
+
+</head>
+
+<body>
+
+  <div class="card">
+
+
+    <div class="top-section">
+      <div data-id="day" class="entry-section">
+        <label>Day</label>
+        <input type="text" placeholder="DD">
+        <div class="error-msg error-invalid"></div>
+      </div>
+      <div data-id="month" class="entry-section">
+        <label>Month</label>
+        <input type="text" placeholder="MM">
+        <div class="error-msg"></div>
+      </div>
+      <div data-id="year" class="entry-section">
+        <label>Year</label>
+        <input type="text" placeholder="YYYY">
+        <div class="error-msg"></div>
+      </div>
+    </div>
+
+    <div class="middle-section">
+      <div class="line"></div>
+      <div class="icon"></div>
+    </div>
+
+    <div class="bottom-section">
+      <div class="result">
+        <span class="figure fig-years">--</span>
+        <div class="time-unit time-years">years</div>
+      </div>
+      <div class="result">
+        <span class="figure fig-months">--</span>
+        <div class="time-unit time-months">months</div>
+      </div>
+      <div class="result">
+        <span class="figure fig-days">--</span>
+        <div class="time-unit time-days">days</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+  <script src="index.js"></script>
+
+</body>
+
+</html>
