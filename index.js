@@ -22,6 +22,18 @@ function errorFormatting(input) {
     input.previousElementSibling.style.color = '#FF5959';
 }
 
+function animateFigures(number, period) {
+    var counter = 0;
+    document.querySelector(`.fig-${period}`).innerHTML = counter;
+    var interval = setInterval(function () {
+        if (counter == number) {
+            clearInterval(interval);
+        }
+        document.querySelector(`.fig-${period}`).innerHTML = counter;
+        counter++;
+    }, 100);
+}
+
 submitBtn.addEventListener('click', () => {
 
     for (let input of inputs) {
@@ -59,9 +71,9 @@ submitBtn.addEventListener('click', () => {
             }
         } else {
             age = moment.duration(date.diff(todayDate));
-            document.querySelector('.fig-years').innerText = Math.abs(age.years());
-            document.querySelector('.fig-months').innerText = Math.abs(age.months());
-            document.querySelector('.fig-days').innerText = Math.abs(age.days());
+            animateFigures(parseInt(Math.abs(age.years())), 'years');
+            animateFigures(parseInt(Math.abs(age.months())), 'months');
+            animateFigures(parseInt(Math.abs(age.days())), 'days');
         }
 
         if (Math.abs(age.years()) == 1) {
